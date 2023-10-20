@@ -1,0 +1,340 @@
+.home-view-pc {
+	position: relative;
+	// padding-bottom: 76px;
+	.section-title {
+		margin-bottom: 24px;
+		font-size: 24px;
+		color: $color-white;
+		font-weight: 700;
+		// line-height: 36px;
+	}
+	button:not([class*='swiper-button']) {
+		min-width: 70px;
+	}
+	.game-list-swiper {
+		// padding: 0 12px;
+		.game-item {
+			position: relative;
+			border-radius: $border-game-radius;
+			// overflow: hidden;
+			// background: $block-bg-2;
+			cursor: pointer;
+			.game-cover {
+				// border-top-left-radius: $border-game-radius;
+				// border-top-right-radius: $border-game-radius;
+				border-radius: $border-game-radius;
+				overflow: hidden;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.game-info {
+				padding: 12px 8px;
+				.game-name {
+					font-size: 14px;
+					font-weight: 400;
+					color: $text-lowlight;
+					width: 100%;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					// line-height: 1.2;
+				}
+				.game-provider {
+					font-size: 12px;
+					font-weight: 500;
+				}
+			}
+		}
+		.game-item.provider-game-item {
+			display: flex;
+			align-items: center;
+			height: 78px;
+			background: $block-bg-2;
+			border-radius: $border-radius;
+			.provider-image {
+				margin: 0 auto;
+			}
+		}
+	}
+	.home-jackpot {
+		position: relative;
+		height: 330px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 20px;
+		overflow: hidden;
+		.jackpot-title {
+			color: $color-white;
+		}
+		.jackpot-main {
+			padding-bottom: 32px;
+			border-radius: 0 0 20px 20px;
+			text-align: center;
+			color: $color-white;
+			.prize {
+				position: relative;
+				border-radius: 60px;
+				color: $home-white;
+				text-shadow: 0px 0px 10px $second;
+				height: 80px;
+			}
+			.jackpot-game-swiper {
+				position: relative;
+				margin: 0 148px;
+				width: calc(100% - 296px);
+				overflow: hidden;
+				.game-item {
+					position: relative;
+					padding: 0 12px;
+				}
+			}
+
+			.swiper-button-next:after,
+			.swiper-rtl .swiper-button-prev:after,
+			.swiper-button-prev:after,
+			.swiper-rtl .swiper-button-next:after {
+				font-size: 24px;
+			}
+			.swiper-button-next,
+			.swiper-button-prev {
+				color: $text-lowlight;
+				&:hover {
+					color: $second;
+				}
+			}
+			.swiper-button-prev {
+				left: 100px;
+				top: unset;
+				bottom: 58px;
+			}
+			.swiper-button-next {
+				right: 100px;
+				top: unset;
+				bottom: 58px;
+			}
+		}
+	}
+
+	.home-game {
+		overflow: hidden;
+	}
+	.home-random-recommend {
+		position: relative;
+		padding: 46px 42px;
+		height: 324px;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background: linear-gradient(180deg, #6621e4 0%, rgba(20, 20, 20, 0.3) 80%);
+		.main-container {
+			width: 55%;
+
+			text-align: center;
+		}
+		.random-recommend-swiper {
+			position: relative;
+			width: 100%;
+			margin-bottom: 8px;
+			.game-item {
+				position: relative;
+				.game-cover {
+					overflow: hidden;
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+				.game-info {
+					.game-name {
+						font-size: 14px;
+						font-weight: 700;
+					}
+					.game-provider {
+						font-size: 12px;
+						font-weight: 500;
+					}
+				}
+			}
+		}
+		.active-game-name {
+			margin-bottom: 4px;
+			font-size: 16px;
+			color: $text-base;
+			text-align: center;
+			// line-height: 24px;
+		}
+		.active-game-view {
+			margin-bottom: 17px;
+			font-size: 12px;
+			font-weight: 500;
+			color: $text-lowlight;
+			text-align: center;
+			// line-height: 18px;
+		}
+		.btn-random {
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			i {
+				margin-left: 8px;
+				font-size: 18px;
+			}
+		}
+	}
+	.home-rank {
+		.home-rank-swiper {
+			.nav-item {
+				width: auto;
+			}
+		}
+		.winner-list {
+			margin-bottom: 72px;
+			.winner-item {
+				display: flex;
+				align-items: center;
+				height: 68px;
+				padding: 8px 24px;
+				margin-bottom: 8px;
+				background: $block-bg-2;
+				border-radius: $border-radius;
+				color: $text-lowlight;
+				font-size: 12px;
+				font-weight: 500;
+				> *:not(:last-child) {
+					margin-right: 24px;
+				}
+				.cover-img {
+					flex-basis: 36px;
+					flex-shrink: 0;
+					width: 36px;
+					height: 36px;
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+				.game-info {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					width: 100%;
+					font-weight: 500;
+					// line-height: 1.2;
+					color: $text-base;
+					p {
+						width: 24%;
+						font-size: 16px;
+					}
+				}
+				&:hover {
+					color: $text-base;
+					background-color: $text-lowlight;
+					.text-lowlight {
+						color: $text-base;
+					}
+				}
+			}
+		}
+	}
+	.promote-block {
+		padding: 24px 24px 28px 24px;
+		border-radius: 20px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		.join-item {
+			width: 32%;
+			padding: 0 16px;
+			border-radius: $border-radius;
+			height: 60px;
+			background: $block-bg-2;
+			p {
+				// line-height: 24px;
+			}
+			.bar {
+				flex: 1;
+				height: 8px;
+				border-radius: 0 8px 8px 0;
+				background: $second;
+			}
+			.bar-value {
+				margin-left: 12px;
+				font-size: 24px;
+				font-weight: bold;
+				// line-height: 36px;
+			}
+		}
+	}
+}
+.home-search-wrap {
+	background: $block-bg-2;
+	.home-nav {
+		margin-bottom: 36px;
+		.home-nav-swiper {
+			.nav-item {
+				width: auto;
+			}
+		}
+	}
+	.home-search-result {
+		.gameBox {
+			overflow-y: scroll;
+			max-height: 600px;
+			.game-item {
+				position: relative;
+				border-radius: $border-game-radius;
+				// overflow: hidden;
+				// background-color: $bg;
+				.game-cover {
+					// border-top-left-radius: $border-game-radius;
+					// border-top-right-radius: $border-game-radius;
+					border-radius: $border-game-radius;
+					overflow: hidden;
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+				.game-info {
+					.game-name {
+						font-size: 14px;
+						font-weight: 700;
+					}
+					.game-provider {
+						font-size: 12px;
+						font-weight: 500;
+					}
+				}
+			}
+		}
+	}
+	.game-item {
+		position: relative;
+		// background-color: $bg;
+	}
+	.sys-btn {
+		padding: 0 24px;
+	}
+}
+//设置背景图片失效时背景 lesile 2023/2/9
+.game-cover {
+	background-color: $color-btn-bg;
+}
+
+.notice-header {
+	background: $block-bg;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: $color-white;
+	@apply h-[55px] text-center flex flex-col justify-center text-[20px];
+}
+.notice-image-container {
+	height: calc(452px * 351 / 311);
+	width: 100%;
+	.notice-image {
+		height: 0;
+		padding-bottom: calc(452px * 351 / 311);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		overflow: hidden;
+		border-radius: $border-radius;
+	}
+}

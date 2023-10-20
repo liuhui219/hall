@@ -1,0 +1,573 @@
+.sys-input {
+	position: relative;
+	.input-wrap {
+		border: 1px solid $color-btn-border;
+		border-radius: $border-radius;
+		display: flex;
+		align-items: center;
+		height: $button-height;
+		background: $bg;
+		flex: 1; //lesile 2023/2/6 width: 100% => flex:1 验证码密码输入框错误
+		position: relative;
+		&.disabled {
+			border: none;
+			pointer-events: none;
+		}
+		&.border-none {
+			border: none;
+		}
+		&.border-error {
+			border-color: $error;
+		}
+		&.input-back {
+			background: $block-bg-2;
+		}
+		&.no-back {
+			background: transparent;
+		}
+		&.big-radius {
+			border-radius: $border-radius;
+		}
+	}
+	.input-error-msg {
+		padding-top: 4px;
+	}
+	input {
+		flex: 1;
+		height: 100%;
+		padding-right: 20px;
+		padding-left: 12px;
+		min-width: 0; //lesile 2023/2/6 验证码密码输入框错误
+		color: $color-white;
+		font-size: 14px;
+		&::placeholder {
+			color: $placeholder-color;
+			font-weight: 400;
+		}
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus,
+		&:-webkit-autofill:active {
+			-webkit-text-fill-color: $text-base;
+			-webkit-box-shadow: 0 0 1000px transparent inset;
+			-webkit-transition-delay: 99999s;
+			transition-delay: 99999s;
+			-webkit-transition: background-color 99999s ease-out;
+			transition: background-color 99999s ease-out;
+			box-shadow: 0 0 1000px transparent inset;
+			caret-color: $text-base;
+		}
+		&[disabled] {
+			opacity: 0.8;
+		}
+		&.prepend {
+			padding-left: 0;
+		}
+	}
+
+	.btn-show-password,
+	.btn-clear {
+		padding: 10px;
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $text-lowlight;
+		float: right;
+	}
+
+	&:focus:not(.input-read-only),
+	&:hover:not(.input-read-only) {
+		.input-wrap {
+			border-color: $text-base;
+		}
+	}
+
+	.same-height {
+		height: 100%;
+	}
+	&.input-format {
+		background: transparent;
+		input {
+			position: relative;
+			z-index: 1;
+			caret-color: white;
+			font-variant-numeric: tabular-nums; //不支持IE浏览器
+			font-feature-settings: 'tnum';
+			background: transparent !important;
+			color: transparent !important;
+			text-align: justify;
+		}
+	}
+	&.input-error {
+		margin: 0 !important;
+	}
+
+	i {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $text-lowlight;
+		flex-shrink: 0;
+	}
+
+	&.input-read-only {
+		input {
+			cursor: inherit;
+		}
+	}
+
+	&:focus-within:not(.input-read-only),
+	&:focus-within:not(.input-disable),
+	&:focus:not(.input-read-only),
+	&:focus:not(.input-disable) {
+		.input-wrap {
+			border-color: $text-base;
+		}
+	}
+}
+
+.error-msg {
+	color: $error;
+	text-align: left;
+	// position: absolute;
+	// top: 100%;
+}
+
+//checkbox
+.sys-checkbox {
+	input[type='checkbox']:not(.is-check)::before {
+		content: '';
+	}
+	label {
+		display: flex;
+		color: $placeholder-color;
+		font-size: 14px;
+	}
+	input {
+		width: 14px;
+		height: 14px;
+		margin-top: 2px;
+		border: 1px solid $placeholder-color;
+		background: $block-bg-2;
+		color: $text-base;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&::before {
+			content: '\e947';
+			font-family: 'sysicon' !important;
+			color: $placeholder-color;
+		}
+		&:checked {
+			border: 1px solid $second;
+			background: $second;
+			&::before {
+				color: #0e0e0e;
+				font-size: 12px;
+				transform: scale(0.7);
+			}
+		}
+	}
+	.check-content {
+		padding-left: 10px;
+		line-height: 1.2;
+		a {
+			color: $second;
+			text-decoration: none;
+		}
+	}
+	&.checkbox-m {
+		input {
+			width: 14px;
+			height: 14px;
+		}
+	}
+}
+
+.sys-checkbox.check-box-high {
+	padding: 8px 12px;
+	.check-content {
+		line-height: 1.5;
+		padding-top: 2px;
+	}
+	label {
+		align-items: center;
+	}
+	input[type='checkbox'].is-check::before {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.sys-switch {
+	.switch {
+		position: relative;
+		display: inline-block;
+		width: 80px;
+		height: 40px;
+	}
+
+	.switch input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 30px;
+		background-color: #ccc;
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+	}
+
+	.slider:before {
+		position: absolute;
+		content: '';
+		height: 30px;
+		width: 30px;
+		left: 5px;
+		bottom: 5px;
+		border-radius: 50%;
+		background-color: white;
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+	}
+
+	input:checked + .slider {
+		background-color: $second;
+	}
+
+	input:focus + .slider {
+		box-shadow: 0 0 1px $second;
+	}
+
+	input:checked + .slider:before {
+		-webkit-transform: translateX(130%);
+		-ms-transform: translateX(130%);
+		transform: translateX(130%);
+	}
+}
+//message
+.sys-message {
+	position: fixed;
+	left: 0;
+	z-index: zIndex('message');
+	width: 100%;
+	padding: 10px 12px 0;
+	display: flex;
+	gap: 12px;
+	flex-direction: column;
+	.message-box {
+		position: relative;
+		display: flex;
+		align-items: center;
+		color: $text-base;
+		padding: 20px;
+		background: $block-bg;
+		border-radius: $border-radius;
+		box-shadow: 0px 3px 8px 0px #232825;
+		&.message-error {
+			.icon-container {
+				background: $error;
+			}
+		}
+		&.message-success {
+			.icon-container {
+				background: $second;
+			}
+		}
+		.icon-container {
+			width: 30px;
+			height: 30px;
+			display: flex;
+			flex-shrink: 0;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			color: #323c3c;
+			overflow: hidden;
+			margin-right: 15px;
+			i {
+				font-size: 18px;
+				font-weight: 700;
+			}
+		}
+		// transition: 0.3s;
+		.message {
+			display: flex;
+			align-items: center;
+			flex: 1;
+			font-size: 14px;
+			color: $text-base;
+		}
+		.btn-clear {
+			float: right;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $placeholder-color;
+		}
+		.progressbar {
+			position: absolute;
+			bottom: 0;
+			left: 12px;
+			width: calc(100% - 24px);
+			height: 2px;
+			overflow: hidden;
+			.rate {
+				width: 0;
+				height: 100%;
+				background: $text-base;
+				border-radius: 50px;
+				transition: 0.1s;
+			}
+		}
+		&.message-error {
+			// .message {
+			// 	color: $error;
+			// }
+			.progressbar .rate {
+				background: $error;
+			}
+		}
+		&.message-warning {
+			// .message {
+			// 	color: $main;
+			// }
+			.progressbar .rate {
+				background: $main;
+			}
+		}
+		&.message-success {
+			.message {
+				color: $color-success;
+			}
+			.progressbar .rate {
+				background: $color-success;
+			}
+		}
+	}
+	&.sys-message-top {
+		top: 0;
+		flex-direction: column-reverse;
+	}
+	&.sys-message-bottom {
+		bottom: 0;
+	}
+}
+
+// select
+.sys-select {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	i {
+		position: absolute;
+		right: 12px;
+		bottom: calc((#{$button-height} - 16px) / 2);
+		color: $text-lowlight;
+	}
+	select,
+	.select {
+		&:not(.unless) {
+			background: $block-bg-2;
+			border: 1px solid $block-bg;
+		}
+		flex-shrink: 0;
+		-moz-appearance: none; /* Firefox */
+		-webkit-appearance: none; /* Safari and Chrome */
+		appearance: none;
+		border-radius: $border-radius;
+		@apply w-full text-[14px] font-medium px-[12px];
+		&:focus {
+			outline: none;
+		}
+	}
+	&-pc {
+		.sysicon-select-arrow-down {
+			font-size: 16px;
+		}
+		select,
+		.select {
+			height: $button-height;
+			// line-height: 1.2;
+		}
+	}
+	&-mobile {
+		.sysicon-select-arrow-down {
+			font-size: 14px;
+		}
+		select,
+		.select {
+			height: $button-height;
+			// line-height: 1.2;
+		}
+	}
+}
+.sys-option {
+	background: $block-bg-2;
+}
+.sys-select-group {
+	$gap-x: 12px !default;
+	// column-gap: $gap-x;
+	@apply flex w-full;
+	.sys-select {
+		@apply flex-grow;
+		select,
+		.select {
+			text-align-last: center;
+			@apply border-none rounded-none;
+		}
+	}
+	i {
+		color: $color-white;
+	}
+}
+
+.sys-select-center {
+	.sys-select {
+		.select {
+			justify-content: center;
+			text-align: center;
+		}
+	}
+	li {
+		div {
+			text-align: center;
+			justify-content: center;
+		}
+	}
+}
+.sys-date {
+	border-radius: $border-radius;
+	border: 1px solid $block-bg;
+	@apply w-full text-[14px] font-medium;
+}
+.sys-select-chat {
+	width: 120px;
+	.sys-select {
+		select,
+		.select {
+			background: $bg;
+			border: none;
+			border-radius: 8px;
+		}
+	}
+	.select {
+		height: $chat-select-height;
+		font-size: $chat-select-font-size;
+		background: $chat-bg-2;
+		i {
+			margin-left: $chat-select-ml;
+			font-size: 12px;
+			transform: $chat-select-scale;
+		}
+	}
+	.sysicon-select-arrow-down {
+		right: $chat-arrow-position;
+		bottom: $chat-arrow-position;
+		color: $chat-arrow-color;
+	}
+	.sys-option {
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-top: 15px;
+		background: $chat-bg-3;
+	}
+	.active {
+		background: #384142;
+	}
+}
+.sys-tabs-wrap {
+	position: relative;
+	.sys-tab {
+		color: $text-lowlight;
+		@apply flex-grow p-[8px] text-[16px] font-bold  text-center cursor-pointer relative;
+		&.active {
+			color: $color-white;
+			.sys-tab-bottom {
+				z-index: 1;
+				background: $second;
+			}
+		}
+	}
+	.sys-tab-bottom {
+		height: 3px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 0;
+		background-color: $block-bg;
+		border-radius: 2px;
+		width: 100%;
+	}
+	&.sticky {
+		position: sticky;
+		top: 0;
+		background-color: $bg;
+	}
+	&.notice {
+		.sys-tab {
+			color: $color-white;
+			@apply max-w-[100%];
+			&.active {
+				color: $second;
+			}
+		}
+	}
+}
+
+button.sys-btn.send-code-btn {
+	font-size: 12px;
+	padding: 0 10px;
+	border-radius: 10px;
+	margin: 0 2px;
+	color: $second;
+	border: 0.5px solid $placeholder-color;
+	background: $block-bg-2;
+	box-shadow: 4px 4px 4px 0px rgba(115, 115, 115, 0.2) inset;
+}
+button.sys-btn.send-code-btn-complete {
+	color: $main;
+	font-size: 12px;
+	padding: 0 10px;
+	border-radius: 10px;
+	margin: 2px;
+	border: none;
+}
+.vertify-input {
+	width: 100%;
+	height: 100%;
+	caret-color: transparent;
+	color: transparent;
+	// user-select: none;
+	background-color: transparent;
+	outline: transparent;
+	text-indent: 1vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	letter-spacing: calc((100vw - 130px) / 7);
+	@apply text-[14px];
+}
+.vertify-input-text {
+	background-color: $block-bg-2;
+	color: $color-white;
+	width: 36px;
+	height: 36px;
+	border-radius: 10px;
+	user-select: none;
+	@apply flex items-center justify-center text-[14px];
+}

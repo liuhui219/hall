@@ -1,0 +1,22 @@
+// 独立样式
+body[model='A'] {
+	#root,
+	#root-p {
+		// .navigation,
+		// .navigation-header,
+		// .header {
+		// 	.logo {
+		// 		height: 30px;
+		// 	}
+		// }
+
+		.down-tip {
+			.tips {
+				color: $bg;
+			}
+			.close-icon {
+				color: $bg;
+			}
+		}
+	}
+}

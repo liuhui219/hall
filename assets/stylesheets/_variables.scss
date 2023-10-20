@@ -1,0 +1,170 @@
+$color-white: #ffffff; //白色
+$dark-bg-03: rgba(20, 20, 20, 0.3); //dark-bg0.3
+$login-kuang: rgba(0, 0, 0, 0.08);
+$login-white: #ffffff;
+$home-white: #ffffff;
+$home-disable-color: #3e4142; //未使用
+$home-gray02: #4f5353; //未使用
+$menu-dark-bg-03: rgba(20, 20, 20, 0.3);
+$menu-white: #ffffff;
+$menu-disable-color: #3e4142;
+$menu-bj01: linear-gradient(39deg, #123e26 26.42%, rgba(38, 40, 40, 0) 98.89%);
+$menu-bj02: linear-gradient(28deg, #4d1f1c 13.78%, rgba(38, 40, 40, 0) 152.19%);
+$menu-bj03: linear-gradient(25deg, #58481f 12.57%, rgba(38, 40, 40, 0) 95.76%);
+
+$text-base: #e2e8e3;
+$text-lowlight: #b2babb;
+$text-button: #323c3c;
+$text-button2: #323c3c;
+$down-03: #c34904;
+$error: #ea1448;
+$main: #ffc700;
+$second: #aad110;
+$btn-main: #ffc700;
+$btn-second: #aad110;
+$placeholder-color: #586b6d;
+$bg: #1d1d1d;
+$block-bg: #373939;
+$block-bg-2: #262828;
+$disable-color: #3e4142;
+$gray: #74787e;
+$dark-bg: #141414;
+
+$login-bg: #161c1f;
+$login-miaobian: #323c3c;
+$login-text: #7f8889;
+$login-text-lowlight: #b2babb;
+$login-text-button: #323c3c;
+$login-block-bg: #323c3c;
+$login-main: #ffc700;
+$login-second: #aad110;
+$login-error: #ea1448;
+$login-gray: #74787e;
+
+$home-text-base: #e2e8e3;
+$home-text-button: #323c3c;
+$home-text-lowlight: #b2babb;
+$home-second: #aad110;
+$home-main: #ffc700;
+$home-block-bg: #373939;
+$home-block-bg-2: #262828;
+$home-bg: #1d1d1d;
+$home-gray: #74787e;
+
+$menu-second: #aad110;
+$menu-block-bg-2: #262828;
+$menu-text-lowlight: #b2babb;
+$menu-gray: #74787e;
+$menu-bg: #171925;
+$menu-gray-2: #2e3132;
+$menu-text-gray: #74787e;
+
+$Activity-bg: transparent;
+//B模板额外颜色///////////////////////////////////////////////////////////////////////
+$home-tab-bar-wxz: #585e77;
+$home-top-yuedi: #06060e;
+$home-the-list-color06: rgba(#757fa5, 0.6);
+$dark-bg-05: rgab(#171925, 0.5);
+$home-carousel-btn: #4B78F5;
+$home-placeholder-color: #585e77;
+$menu-top-di: #171925;
+$home-tab-bar-bg: #171925;
+$menu-01: #131521;
+$home-btn-second: linear-gradient(107deg, #67A4FF -2.33%, #2D61E5 76.83%);
+
+//前端自定义颜色///////////////////////////////////////////////////////////////////////
+$color-success: #9dc811;
+$color-bg-o: rgba($bg, 0.5);
+$color-btn-bg: $block-bg-2;
+$color-btn-border: $block-bg;
+$icon-back: #1c1f2d;
+
+//充值
+$deposit-btn-active-border: '';
+$deposit-amount-select: linear-gradient(101.88deg, rgba(194, 240, 13, 0.8) 0%, rgba(207, 255, 19, 0) 100%);
+
+//奖金中心
+$bonus-center-card-bg: linear-gradient(90deg, rgba(160, 170, 46, 0.5) 0.34%, rgba(38, 40, 40, 0) 98.28%);
+
+//转盘roulette
+$color-roulette-bg: #2a1162;
+$color-roulette-nomarl: #586587;
+$color-roulette-advance: #ff9900;
+$color-roulette-weekly: #2d9aff;
+$color-checkin-day: #ffb800;
+
+// 双钱包
+$wallet-rules-show: block;
+$wallet-user-menu-bg: linear-gradient(90.15deg, #2e2e2e 0.73%, #262828 99.9%);
+$wallet-rules-line: transparent;
+$wallet-menu-radius: 0;
+$wallet-menu-decorate-right: 39px;
+$wallet-menu-decorate-right-h5: 16px;
+
+// 聊天室定义
+$chat-bg-2: $bg;
+$chat-bg-3: $block-bg;
+$chat-bg-4: linear-gradient(107deg, #84d950 -1.73%, #5b9230 76.33%);
+
+$chat-different-1: block;
+$chat-different-2: none;
+$chat-month-width: 80px;
+$chat-month-height: 30px;
+$chat-month-color: #74787e;
+$chat-month-weight: normal;
+$chat-month-space: 0;
+$chat-emo-color: #74787e;
+$chat-select-font-size: 14px;
+$chat-select-height: 40px;
+$chat-select-ml: 13px;
+$chat-select-scale: scale(1, 1);
+$chat-arrow-position: 12px;
+$chat-arrow-color: #b2babb;
+$chat-gif-height: 85px;
+$chat-gif-width: calc((100% - 5.5px) / 2);
+$chat-gif-child-2n: 0;
+$chat-gif-child-3n: 5px;
+$chat-header-title-left: 34px;
+$chat-select-dot1: #6cde07;
+$chat-select-dot2: #c3f596;
+
+// 以下无用-暂不删除
+// $color-wallet-bg: linear-gradient(180deg, #193431, #262828);
+// $color-wallet-border: linear-gradient(180deg, #2f4b43, #323c3c);
+//通用px设置/////////////////////////////////////////////////////
+$app-download-height: var(--app-download-height, 0px); //注意：--app-download-height 有用
+$app-header-height: 60px;
+$pc-header-height: 80px;
+$app-navbar-height: 65px;
+$button-height: 43px;
+$border-radius: 6px;
+$border-game-radius: 4px;
+$page-margin: 12px;
+$pc-header-max-width: 320px; //菜单栏展开
+$pc-header-min-width: 64px; //菜单收起
+
+/////////////////////////////////////////////////////////////////////////
+
+$z-index: (
+	'container': 100,
+	'navbar': 350,
+	'header': 300,
+	'navigationOverlay': 400,
+	'navigation': 500,
+	'loginModalOverlay': 600,
+	'loginModal': 700,
+	'modal': 800,
+	'message': 3000,
+);
+@function zIndex($index) {
+	@if not map-has-key($z-index, $index) {
+		@warn "No layer found for `#{$index}` in $z-layers map. Property omitted.";
+	}
+
+	@return map-get($z-index, $index);
+}
+
+@mixin icon($back, $text) {
+	background-color: $back;
+	color: $text;
+}

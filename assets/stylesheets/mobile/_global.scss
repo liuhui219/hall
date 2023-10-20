@@ -1,0 +1,140 @@
+html,
+body {
+	background: $bg;
+	font-family: 'Poppins' !important;
+	color: $text-base;
+	overflow-anchor: none;
+	font-weight: 500;
+	// position: static !important; //LAT 2-16 避免被live-chat覆盖样式，导致打开live-chat时显示异常
+	height: 100%; //LAT 3-6 在page中滚动
+	overflow: hidden; //LAT 3-8 防止ios滚动 自动隐藏工具栏 导致的异常【ios底部padding效果会变化】
+	* {
+		box-sizing: border-box;
+	}
+}
+
+.page-container {
+	z-index: zIndex('container');
+	padding-bottom: $app-navbar-height;
+	padding-top: $app-header-height;
+	height: 100%; //LAT 3-6 在page中滚动
+	overflow-y: auto; //LAT 3-6 在page中滚动
+	overflow-x: hidden;
+}
+// lesile 2023/2/4 隐藏页面上下边距
+.page-container.hide-top {
+	padding-top: 0;
+}
+.page-container.hide-bottom {
+	padding-bottom: 0;
+}
+.page-container.sport {
+	overflow: unset !important;
+}
+
+.header ~ .page-container:not(.hide-top) {
+	padding-top: $app-header-height;
+}
+.header.is-down-tip ~ .page-container:not(.hide-top) {
+	padding-top: calc(#{$app-header-height} + #{$app-download-height});
+}
+
+.bar {
+	width: 50%;
+	height: 8px;
+	border-radius: 8px;
+	background: $second;
+	&-bg {
+		width: 100%;
+		background-color: $bg;
+	}
+}
+
+.link:active,
+button:not(.scale-btn):active {
+	filter: brightness(90%);
+	transition: 0.2s;
+}
+.section-title {
+	font-size: 20px;
+	font-weight: 700;
+}
+.wrap {
+	margin: 0 auto;
+}
+
+.vfm__content {
+	padding-top: $app-header-height;
+}
+.card-block {
+	border-radius: $border-radius;
+	background: $block-bg-2;
+}
+
+.card-block-dark {
+	border-radius: $border-radius;
+	background-color: $bg;
+}
+.overflow-wrap {
+	overflow-wrap: anywhere;
+}
+
+.search-mask {
+	background-color: $color-bg-o;
+	height: calc(100% + #{$app-header-height});
+	top: calc(-1 * $app-header-height);
+	@apply absolute z-[10] left-0 w-[100%];
+}
+
+.app-tournament {
+	position: fixed;
+	z-index: 10000;
+	right: 0px;
+	top: 100px;
+
+	.react-draggable {
+		scale: 0.6 !important;
+		// transform: scale(0.6) !important;
+	}
+}
+.sys-btn.home-game-btn {
+	text-align: center;
+	justify-content: center;
+	border: 0.5px solid $home-block-bg;
+	background: $home-block-bg-2;
+	color: $home-text-lowlight;
+	display: flex;
+	align-items: center;
+	position: relative;
+	&.home-game-btn-focus {
+		color: $home-main;
+	}
+	&.home-menu-active {
+		background: $home-second;
+		color: $home-text-button;
+		&.home-game-btn-focus {
+			background: $home-main;
+			
+		}
+	}
+}
+
+.dl-mobile-dividing-line{
+	@apply h-[1px];
+	background: $block-bg-2;
+}
+.dl-refer-describe{
+	@apply px-[9px] py-[16px] mx-[15px] mb-[10px] text-[14px] rounded-md;
+	background: $block-bg-2;
+	h2{
+		@apply font-[600];
+		color: $color-white;
+	}
+	p{
+		@apply font-[400];
+		color: $text-lowlight;
+		span{
+			color: $main;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.modal-rule {
+	padding-bottom: 24px;
+	@apply flex-1;
+	background-color: $bg;
+}
+.vfm__content.roulette-rule-content {
+	@apply px-[15px] mx-0 h-full overflow-y-auto overflow-x-hidden pb-[24px];
+}
+.vfm__content.roulette-reward-content {
+	background: transparent;
+	@apply w-screen h-screen max-h-screen py-0 px-[15px] mx-0 fixed top-0 left-0 flex items-center justify-start;
+	.reward-content-top {
+		margin-top: $app-header-height;
+	}
+	.reward-content-close {
+		position: absolute;
+		top: $app-header-height;
+		right: calc(4.2% + 15px);
+	}
+}
+.vfm__content.roulette-bonus-content {
+	@apply px-[15px] mx-0 h-full  overflow-hidden flex flex-col;
+}

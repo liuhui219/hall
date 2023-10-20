@@ -1,0 +1,81 @@
+.rollover {
+	background-color: $block-bg-2;
+	height: 66px;
+	padding: 12px 10px;
+	border-radius: $border-radius;
+	@apply w-full text-[12px] flex flex-col justify-between mb-[8px];
+	.rollover-title {
+		color: $text-lowlight;
+	}
+	.rollover-progress {
+		background-color: $disable-color;
+		height: 15px;
+		border-radius: 8px;
+		overflow: hidden;
+		p {
+			background-color: $second;
+			border-radius: 8px;
+			overflow: hidden;
+			height: 100%;
+		}
+	}
+}
+
+.withdraw-title {
+	@apply text-[14px] font-bold mt-[16px];
+	&-pc {
+		@apply text-[16px] font-bold mt-[16px];
+	}
+}
+
+.cpf-value {
+	width: 80%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	color: white;
+	padding: 0 12px;
+	font-size: 14px;
+	font-variant-numeric: tabular-nums; //不支持IE浏览器
+	font-feature-settings: 'tnum';
+	& > span {
+		display: inline-block;
+		border-bottom: 1px solid #fff;
+		color: transparent;
+	}
+	& > span.has-input {
+		color: white;
+		border-color: transparent;
+	}
+}
+
+.input-free {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 15px;
+	font-size: 14px;
+	position: relative;
+	background: linear-gradient(180deg, #f39304 0%, #f35b04 100%);
+	border-radius: 0px 5px;
+	span {
+		transform: scale(0.72);
+	}
+}
+.input-free-empty {
+	color: $main;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 5px;
+	height: 15px;
+	font-size: 12px;
+	position: relative;
+}
+.withdraw-border {
+	border-bottom: 1px dashed $disable-color;
+}

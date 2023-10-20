@@ -1,0 +1,632 @@
+#root-p,
+#root {
+	.schemas-btn {
+		background: $block-bg;
+		color: $text-lowlight;
+		font-size: 12px;
+		height: 28px;
+		border-radius: 2px;
+	}
+
+	
+	.home-search-icon {
+		color: $home-gray;
+		font-size: 18px;
+	}
+	.class-game-select {
+		.sys-select {
+			.select {
+				background: $home-block-bg-2;
+				border: none;
+			}
+		}
+		.sys-option {
+			background: $block-bg-2;
+			margin-top: 8px;
+			color: $text-lowlight;
+		}
+		.active {
+			color: $text-base;
+			background: $block-bg;
+		}
+	}
+	.game-provider {
+		color: $home-text-lowlight;
+	}
+	.navigation {
+		padding-left: 10px;
+		padding-right: 13px;
+		.navigation-group-wrap {
+			padding: 0;
+		}
+
+		.navigation-dot {
+			left: 20px;
+			top: 8px;
+		}
+		.navigation-text {
+			// line-height: 1;
+		}
+	}
+	.sys-tab {
+		font-weight: 400;
+		&.active {
+			font-weight: 700;
+		}
+	}
+	.register-private {
+		color: $login-white;
+	}
+
+	input.verify-input::-webkit-input-placeholder {
+		color: $login-text !important;
+	}
+	.modal-content.register-modal-content {
+		max-height: 100%;
+		overflow: hidden;
+	}
+	.modal-content.register-code-modal-content {
+		height: 100%;
+		background: $login-bg;
+	}
+	.sys-tabs-wrap.login {
+		position: relative;
+		.sys-tab {
+			color: $login-text-lowlight;
+			&.active {
+				color: $login-white;
+				.sys-tab-bottom {
+					background: $login-second;
+				}
+			}
+		}
+		.sys-tab-bottom {
+			background-color: $login-block-bg;
+		}
+	}
+	.sys-input.login-input {
+		.input-wrap {
+			border: 1px solid $login-miaobian;
+			&.disabled {
+				border: none;
+				pointer-events: none;
+			}
+			&.border-none {
+				border: none;
+			}
+			&.border-error {
+				border-color: $login-error;
+			}
+		}
+
+		input {
+			flex: 1;
+			height: 100%;
+			padding-right: 20px;
+			padding-left: 12px;
+			min-width: 0; //lesile 2023/2/6 验证码密码输入框错误
+			color: $login-white;
+			font-size: 14px;
+			&::placeholder {
+				color: $login-text;
+				font-weight: 400;
+			}
+		}
+
+		.btn-show-password,
+		.btn-clear {
+			padding: 10px;
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $text-lowlight;
+			float: right;
+		}
+
+		&:focus:not(.input-read-only),
+		&:hover:not(.input-read-only) {
+			.input-wrap {
+				border-color: $text-base;
+			}
+		}
+
+		.same-height {
+			height: 100%;
+		}
+		&.input-format {
+			background: transparent;
+			input {
+				position: relative;
+				z-index: 1;
+				caret-color: white;
+				font-variant-numeric: tabular-nums; //不支持IE浏览器
+				font-feature-settings: 'tnum';
+				background: transparent !important;
+				color: transparent !important;
+				text-align: justify;
+			}
+		}
+		&.input-error {
+			margin: 0 !important;
+		}
+
+		i {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $text-lowlight;
+			flex-shrink: 0;
+		}
+
+		&.input-read-only {
+			input {
+				cursor: inherit;
+			}
+		}
+
+		&:focus-within:not(.input-read-only),
+		&:focus-within:not(.input-disable),
+		&:focus:not(.input-read-only),
+		&:focus:not(.input-disable) {
+			.input-wrap {
+				border-color: $text-base;
+			}
+		}
+	}
+	.modal-content-login {
+		padding: 0 40px;
+		.check-content {
+			color: $login-text;
+		}
+		button.sys-btn.btn-full-width {
+			border-radius: 8px;
+		}
+		.modal-form > * {
+			margin-bottom: 16px;
+		}
+		.modal-form.reset-modal-form > * {
+			margin-bottom: 19px;
+		}
+		.login-close-container {
+			text-align: right;
+			padding: 0;
+			height: 30px;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			i {
+				position: absolute;
+				right: 0;
+				top: 0;
+				font-size: 18px;
+				z-index: 1;
+				padding: 15px 15px 0 15px;
+				&.back {
+					right: unset;
+					left: 400px;
+					top: 5px;
+					rotate: 90deg;
+				}
+			}
+		}
+
+		.login-tab-pc.sys-tabs-wrap {
+			margin-bottom: 20px;
+		}
+	}
+	.login-tab-pc,
+	.login-tab {
+		.sys-tab-bottom {
+			height: 1px;
+		}
+		.sys-tab {
+			color: $login-white;
+			padding: 10px 0 25px;
+			flex: 1;
+			border-width: 2px;
+			&.active {
+				color: $login-second;
+			}
+		}
+	}
+	.login-close-color {
+		color: $gray;
+	}
+	.modal-content-reset,
+	.modal-content-reset-pc {
+		padding: 0;
+		& > .modal-header {
+			padding: 0 30px 0 40px;
+		}
+		& > .modal-body {
+			padding: 0 40px;
+		}
+		.reset-close-container {
+			margin-top: 0;
+			height: 80px;
+			position: relative;
+
+			display: flex;
+			padding-bottom: 0;
+			padding-top: 0;
+			align-items: center;
+			justify-content: space-between;
+			border-radius: 0px 10px 0px 0px;
+			border-bottom: 1px solid #292e31;
+		}
+		.modal-form > * {
+			margin-bottom: 20px;
+		}
+		.reset-tab.sys-tabs-wrap {
+			margin-top: 56px;
+			margin-bottom: 50px;
+			.sys-tab-bottom {
+				height: 1px;
+			}
+			.sys-tab {
+				padding-bottom: 16px;
+				border-width: 2px;
+				&.active {
+					color: $second;
+				}
+			}
+		}
+	}
+	button.sys-btn.send-code-btn {
+		font-size: 12px;
+		padding: 0 10px;
+		border-radius: 0;
+		margin: 0;
+		color: $second;
+
+		width: auto;
+		border: none;
+		border-left: 1px solid #292e31;
+		background: transparent;
+		box-shadow: none;
+	}
+	button.sys-btn.send-code-btn-complete {
+		font-size: 12px;
+		padding: 0 10px;
+		border-radius: 0;
+		width: 120px;
+		margin: 0;
+		color: $login-text;
+		border: none;
+		border-left: 1px solid #292e31;
+		background: transparent;
+		box-shadow: none;
+	}
+	.login-modal-content,
+	.register-modal-content,
+	.reset-modal-content {
+		border: none;
+		border: none;
+		background: $login-bg;
+		color: $login-text;
+		border-radius: 10px;
+		margin: 0 20px;
+		max-height: 100%;
+		.check-content {
+			color: $login-text;
+		}
+		.btn-full-width {
+			height: 50px;
+			border-radius: 8px;
+		}
+		.reset-close-container {
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-bottom: 1px solid $login-miaobian;
+		}
+		.reset-tab.sys-tabs-wrap {
+			margin-top: 12px;
+			margin-bottom: 30px;
+			.sys-tab-bottom {
+				height: 1px;
+			}
+			.sys-tab {
+				padding-bottom: 19px;
+				border-width: 2px;
+				&.active {
+					color: $login-second;
+				}
+			}
+		}
+	}
+	.tools-g {
+		.wallet {
+			display: flex;
+			align-items: center;
+			padding: 0 12px;
+			height: $button-height;
+			flex: 1;
+			background: $block-bg-2;
+			// border: 1px solid $color-btn-border;
+			border: none;
+			border-radius: $border-radius;
+			border: 0.5px $block-bg;
+			background: $block-bg;
+			color: $text-base;
+			font-size: 12px;
+			justify-content: space-between;
+			font-weight: 500;
+			max-width: calc(100% - 160px);
+			user-select: none;
+			.currency {
+				margin-right: 4px;
+				color: $second;
+			}
+			.amount {
+				width: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+	.header-login {
+		border-bottom: 1px solid $home-block-bg-2;
+	}
+	.sys-btn.btn-view-all {
+		background: $home-block-bg-2;
+		color: $home-text-lowlight;
+		font-size: 12px;
+		font-weight: 500;
+		border-radius: 5px;
+		border: none;
+		height: 30px;
+	}
+	.sys-btn.btn-home-next {
+		width: 30px;
+		height: 30px;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: unset;
+		font-size: 12px;
+		border-radius: 3px;
+		border: none;
+		background-color: $home-block-bg;
+		color: $home-text-lowlight;
+		&:active {
+			opacity: 0.6;
+			i {
+				color: $home-second;
+			}
+		}
+
+		&.swiper-button-disabled {
+			background: $home-block-bg-2;
+			color: $home-gray;
+			pointer-events: none;
+		}
+	}
+
+	.home-footer {
+		background: $dark-bg-03;
+		align-items: flex-start;
+		justify-content: flex-start;
+		color: $home-gray;
+		.footer-title {
+			color: $text-base;
+			margin-bottom: 0;
+		}
+		a {
+			color: $home-gray;
+			&:active {
+				color: $text-lowlight;
+			}
+		}
+	}
+	.navigation-overlay {
+		height: calc(100% - #{$app-navbar-height});
+	}
+	.navigation {
+		width: 100%;
+		height: calc(100% - #{$app-navbar-height});
+		transform: translateX(-100%);
+		background: $menu-bg;
+		padding: 0;
+		.navigation-header {
+			height: 60px;
+			flex-shrink: 0;
+			margin: 0 12px 6px;
+			.btn-close {
+				font-size: 18px;
+			}
+		}
+		&.active {
+			transform: translateX(0);
+			pointer-events: auto;
+		}
+
+		.navigation-body {
+			.navigation-group-wrap {
+				width: 100%;
+				& > * {
+					padding: 0 12px;
+				}
+				display: flex;
+				flex-direction: column;
+				gap: 18px;
+				.navigation-group {
+					margin-bottom: 0;
+
+					display: flex;
+					flex-direction: column;
+					gap: 6px;
+					&.navigation-group-main {
+						background: $dark-bg-03;
+						padding: 10px 12px;
+					}
+					.navigation-item {
+						padding: 0 6px;
+						height: 37px;
+						display: flex;
+					}
+					.menu-casino,
+					.menu-sport {
+						height: 54px;
+					}
+					.navigation-group-block {
+						padding: 12px 0;
+						background: $menu-block-bg-2;
+						border-radius: 6px;
+					}
+				}
+			}
+		}
+	}
+
+	.register-banner {
+		height: 0;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		flex-shrink: 0;
+		margin-bottom: 8px;
+		padding-bottom: calc(100% * 110px / 295px);
+	}
+	.register-modal {
+		background: $login-bg;
+		padding: 20px 20px 0;
+		flex: 1;
+		overflow: hidden;
+		display: flex;
+	}
+	.register-modal.login-modal {
+		padding: 0 22px;
+	}
+	.reset-modal {
+		padding: 0;
+		& > div {
+			padding: 0 22px;
+		}
+	}
+}
+#root-p {
+	.sys-input.search-input {
+		.input-wrap {
+			height: 50px;
+		}
+	}
+	.tools-logined {
+		.wallet {
+			font-size: 16px;
+			font-weight: 600;
+		}
+	}
+	.class-game-select {
+		.sys-select {
+			.select {
+				height: 50px;
+			}
+
+			i {
+				bottom: 18px;
+				font-size: 16px;
+			}
+		}
+		.sys-option {
+			.sys-select-item {
+				cursor: pointer;
+				&:hover {
+					color: $text-base;
+				}
+			}
+		}
+	}
+	.home-search {
+		overflow: hidden;
+		.sys-input.login-input {
+			margin-bottom: 0;
+			.input-wrap {
+				background: $bg;
+			}
+		}
+	}
+	.search-result-input {
+		.input-wrap {
+			height: 60px;
+			&:hover {
+				border-color: $second;
+			}
+		}
+	}
+	.game-item.provider-game-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 92px;
+		background: $block-bg-2;
+		border-radius: $border-radius;
+		.provider-image {
+			width: 70%;
+		}
+	}
+	.sys-btn.btn-view-all {
+		background: $home-block-bg-2;
+		color: $home-text-lowlight;
+		font-size: 12px;
+		font-weight: 500;
+		border-radius: 5px;
+		border: none;
+		height: 36px;
+	}
+	.sys-btn.btn-home-next {
+		width: 36px;
+		height: 36px;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: unset;
+		font-size: 14.4px;
+		border: none;
+		border-radius: 3px;
+		background: $home-block-bg;
+		color: $home-text-lowlight;
+		&:active {
+			scale: 0.7;
+			i {
+				color: $second;
+			}
+		}
+		&:hover {
+			opacity: 0.6;
+			i {
+				color: $home-white;
+			}
+		}
+
+		&.swiper-button-disabled {
+			background: $home-block-bg-2;
+			color: $home-gray;
+			pointer-events: none;
+		}
+	}
+	.navigation {
+		width: 100%;
+		transform: translateX(-100%);
+		.navigation-header {
+			height: $app-navbar-height;
+			margin-bottom: 6px;
+			.btn-close {
+				font-size: 18px;
+			}
+		}
+	}
+	.modal-body {
+		padding: 0 12px;
+	}
+	.modal-content-pc.register-code-modal-content-pc {
+		background: $login-bg;
+		width: 800px;
+		height: 600px;
+	}
+}

@@ -1,0 +1,98 @@
+.loading-default {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin: auto;
+}
+.loading-default div {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 50%;
+	animation: loading-default-spinner 1.2s linear infinite;
+}
+.loading-default div:nth-child(1) {
+	animation-delay: 0s;
+	left: 33px;
+	top: 15px;
+}
+.loading-default div:nth-child(2) {
+	animation-delay: -0.1s;
+	left: 45.73px;
+	top: 20.27px;
+}
+.loading-default div:nth-child(3) {
+	animation-delay: -0.2s;
+	left: 51px;
+	top: 33px;
+}
+.loading-default div:nth-child(4) {
+	animation-delay: -0.3s;
+	left: 45.73px;
+	top: 45.73px;
+}
+.loading-default div:nth-child(5) {
+	animation-delay: -0.4s;
+	left: 33px;
+	top: 51px;
+}
+.loading-default div:nth-child(6) {
+	animation-delay: -0.5s;
+	left: 20.27px;
+	top: 45.73px;
+}
+.loading-default div:nth-child(7) {
+	animation-delay: -0.6s;
+	left: 15px;
+	top: 33px;
+}
+.loading-default div:nth-child(8) {
+	animation-delay: -0.7s;
+	left: 20.27px;
+	top: 20.27px;
+}
+.app-loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000000;
+	background-color: $bg;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: 100%;
+	height: 100%;
+}
+.app-loading.http-loading {
+	background-color: $color-bg-o;
+	z-index: zIndex('message') - 1;
+}
+
+.list-load-container {
+	flex-shrink: 0;
+
+	span {
+		margin-bottom: 10px;
+	}
+}
+
+.list-loading-content {
+	display: inline-block;
+	flex-shrink: 0;
+	-moz-box-sizing: initial;
+	box-sizing: initial;
+	border: 2px solid #a1a1a1;
+	border-right-color: transparent;
+	width: 12px;
+	height: 12px;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-animation: list-loading-spinner 0.9s linear infinite;
+	-moz-animation: list-loading-spinner 0.9s linear infinite;
+	-o-animation: list-loading-spinner 0.9s linear infinite;
+	animation: list-loading-spinner 0.9s linear infinite;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+    <meta name="full-screen" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-orientation" content="portrait" />
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="browsermode" content="application" />
+    <meta name="x5-page-mode" content="app" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script type="text/javascript">
+        function isSafari(){
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf('applewebkit') > -1 && ua.indexOf('mobile') > -1 && ua.indexOf('safari') > -1 &&
+                ua.indexOf('linux') === -1 && ua.indexOf('android') === -1 && ua.indexOf('chrome') === -1 &&
+                ua.indexOf('ios') === -1 && ua.indexOf('browser') === -1) {
+                return true;
+            }else{
+                return false;
+            }
+        }
+        //Safari浏览器后退操作自动关闭【后退操作不会触发普通脚本，但是会触发轮询】
+        function backClose() {
+            if (window.history && window.history.length > 2) {
+                window.close();
+            }
+            setTimeout(()=>{
+                backClose()
+            }, 500)
+        }
+
+        function gameStart() {
+            var url = '';
+            let params = window.location.search.substring(1);
+            if(params){
+                let paramArr = params.split('$$$');
+                for(let i = 0; i < paramArr.length; i++){
+                    let arr = paramArr[i].split('===');
+                    if(arr.length > 1){
+                        switch(arr[0]){
+                            case 'url':
+                                url = arr[1];
+                                break;
+                        }
+                    }
+                }
+            }
+            if(url){
+                //新窗口打开
+                if (isSafari()) {
+                    //加上setTimeout，可以触发浏览器history多一条记录（返回操作才能到这里来）
+                    setTimeout(()=>{
+                        window.location.href = url
+                    }, 10)
+                } else {
+                    window.location.href = url
+                }
+            }else {
+                //新窗口关闭
+				var gameWindow = sessionStorage.getItem("game-window");
+				if (gameWindow) {
+					window.location.href = window.location.origin
+				} else {
+					window.close();
+				}
+			}
+        }
+		
+		if(window.parent == window) {
+            //新窗口
+			backClose()
+			window.addEventListener('load', (event) => {
+				gameStart()
+			})
+            
+        }else{
+            //iframe关闭
+            window.parent.postMessage({cmd:"exit"}, '*');
+		}
+	</script>
+    <title>
+    </title>
+    <style>
+        html {
+            font-size: 13.33333333vw;
+        }
+
+        body {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+			background: #000000;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+
+</html>

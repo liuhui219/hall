@@ -1,0 +1,62 @@
+#npx nuxi init nuxt3-app-cli
+
+-   apis
+    -   constants 常量文件夹
+    -   core 旧 http 请求目录
+    -   game 旧游戏请求目录
+    -   http nuxt 请求目录
+    -   types interface 目录
+    -   utils 项目工具
+        -   format 格式化类型函数
+        -   calc 计算类型函数
+        -   render 绘制类型函数
+-   assets
+    -   stylesheets 样式目录
+        -   common 全局样式
+        -   desktop pc 端样式
+        -   mobile 手机端样式
+    -   image 图片目录
+-   components
+    -   base 基础组件目录
+    -   desktop PC 端组件
+    -   mobile 移动端组件
+-   composables
+    -   useHttp 封装 nodejs 请求配置
+    -   useHttpApi http 请求文件
+    -   useUrl 请求地址缓存
+    -   usePage 页面数据
+    -   useConfig 配置数据
+    -   useGoogleTag
+    -   seoConfig seo 配置数据
+-   env 打包配置目录
+    -   .env.dev 本地配置
+    -   .env.test 测试服配置
+    -   .env.afun 正式配置
+    -   .env.ava 预发布配置
+-   layouts 布局
+    -   default 默认
+-   store 全局数据状态管理
+    -   game.ts 游戏数据
+    -   config.ts 平台配置
+    -   user.ts 用户数据
+    -   zPage\*\*\*\*.ts 页面 ts
+-   middleware 插件
+    -   \*.global.ts 全局生效
+    -   \*.ts
+-   plugins
+    -   \*.ts 全局生效
+    -   device.ts 用户设别信息
+    -   point.ts 金额格式化,金额转化
+    -   lazyload.ts 图片懒加载
+-   server 服务端
+
+-   pages 页面/路由自动生成
+
+    -   [_ch] 可选参数包网 ID
+
+        -   index.vue 主页
+        -   index 主页目录配置可选参数弹窗. 其他页面弹窗相同
+
+        -   game 游戏目录
+            -   [game_id] 游戏 ID
+                -   [game_name] 游戏名称 必填参数未填写相应为主页

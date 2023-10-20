@@ -1,0 +1,62 @@
+.game-items-wrap-mobile {
+	$game-item-width: 31%;
+	@apply flex flex-wrap gap-y-[12px];
+	column-gap: calc((100% - 3 * $game-item-width) / 2);
+	.game-item {
+		position: relative;
+		width: $game-item-width;
+		border-radius: $border-game-radius;
+		// overflow: hidden;
+		// background: $block-bg-2;
+		.game-cover {
+			// border-top-left-radius: $border-game-radius;
+			// border-top-right-radius: $border-game-radius;
+			border-radius: $border-game-radius;
+			overflow: hidden;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.game-info {
+			.game-name {
+				font-size: 12px;
+				font-weight: 700;
+			}
+			.game-provider {
+				font-size: 12px;
+				font-weight: 500;
+			}
+		}
+	}
+}
+.game-items-list-wrap-mobile {
+	$game-item-width: 31%;
+	@apply flex flex-wrap gap-y-[12px];
+	column-gap: calc((100% - 3 * $game-item-width) / 2);
+	.game-item {
+		position: relative;
+		width: $game-item-width;
+		border-radius: $border-game-radius;
+		// overflow: hidden;
+		// background: $block-bg-2;
+		.game-cover {
+			// border-top-left-radius: $border-game-radius;
+			// border-top-right-radius: $border-game-radius;
+			border-radius: $border-game-radius;
+			overflow: hidden;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.game-info {
+			.game-name {
+				font-size: 16px;
+				font-weight: 700;
+			}
+			.game-provider {
+				font-size: 12px;
+				font-weight: 500;
+			}
+		}
+	}
+}

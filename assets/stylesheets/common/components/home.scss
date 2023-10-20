@@ -1,0 +1,46 @@
+.game-list-swiper.recent-swiper {
+	padding: 0 !important;
+	.recent-point {
+		padding: 0 3px;
+		border-radius: 2px;
+		overflow: hidden;
+		width: auto;
+		flex: 0;
+		flex-grow: 0;
+		flex-shrink: 0;
+		color: $second;
+		@apply text-[12px];
+	}
+	.game-info {
+		padding-bottom: 0 !important;
+		@apply flex flex-col items-center justify-center;
+		.game-name {
+			color: $text-base;
+		}
+	}
+	.game-item {
+		position: relative;
+		background-color: transparent !important;
+	}
+}
+
+.active_04_animate {
+	-webkit-animation: list-loading-spinner 2s linear infinite;
+	-moz-animation: list-loading-spinner 2s linear infinite;
+	-o-animation: list-loading-spinner 2s linear infinite;
+	animation: list-loading-spinner 2s linear infinite;
+}
+
+.notice-container {
+	overflow-y: auto;
+}
+
+.section-title.home-game-category {
+	display: flex;
+	align-items: center;
+}
+.home-game-icon {
+	color: $placeholder-color;
+	margin-right: 8px;
+	font-size: inherit;
+}

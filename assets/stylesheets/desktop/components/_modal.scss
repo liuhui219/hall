@@ -1,0 +1,135 @@
+.modal-form {
+	padding: 24px 0;
+	> * {
+		margin-bottom: 16px;
+	}
+}
+.vfm--inset.vfm--fixed.wallet {
+	height: 100;
+	top: 60px;
+}
+//全局弹窗提示
+.modal-dialog.modal-content-pc {
+	width: 500px;
+	margin: 0 16px;
+	padding: 0 24px 24px;
+	background-color: $block-bg-2 !important;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-radius: $border-radius;
+}
+
+//自定义增加
+.vfm {
+	.modal-content-pc.deposit-modal-content-pc {
+		width: 660px;
+		height: 864px;
+		max-height: 90vh;
+	}
+	.modal-content-pc.wallet-modal-content-pc {
+		height: 864px;
+		max-height: 60%;
+		position: fixed;
+		top: 70px;
+		right: 70px;
+		padding: 0;
+		width: 500px;
+
+		background-color: transparent;
+	}
+	.modal-content-pc.logout-modal-content-pc {
+		border-radius: $border-radius;
+		display: flex;
+		flex-direction: column;
+	}
+	.modal-content-pc.userInfo-modal-content-pc {
+		width: 660px;
+		height: 864px;
+		max-height: 90vh;
+		display: flex;
+		flex-direction: column;
+		padding-top: 0;
+		padding-bottom: 0;
+		padding: 0 12px;
+		position: relative;
+	}
+	.modal-content-pc.inviteChest-modal-content-pc {
+		display: flex;
+		flex-direction: column;
+		padding-top: 0;
+		padding-bottom: 0;
+		padding: 0;
+		position: relative;
+	}
+	.modal-content-pc.myProfile-modal-content-pc, 
+	.modal-content-pc.myProfileEdit-modal-content-pc, 
+	.modal-content-pc.settings-modal-content-pc, 
+	.modal-content-pc.account-modal-content-pc, 
+	.modal-content-pc.checkin-modal-content-pc,
+	.modal-content-pc.rewardHistory-modal-content-pc,
+	.modal-content-pc.betHistory-modal-content-pc,
+	.modal-content-pc.transaction-modal-content-pc,
+	.modal-content-pc.message-modal-content-pc,
+	// 代理
+	.modal-content-pc.inviteRecord-modal-content-pc, 
+	.modal-content-pc.commissionRewards-modal-content-pc,
+	.modal-content-pc.distributionRewards-modal-content-pc,
+	.modal-content-pc.friendsList-modal-content-pc,
+	.modal-content-pc.agentHistory-modal-content-pc,
+	.modal-content-pc.spinRule-modal-content-pc,
+	.modal-content-pc.referralRewards-modal-content-pc,
+	.modal-content-pc.referralVipRewards-modal-content-pc,
+	.modal-content-pc.referEarn-modal-content-pc {
+		width: 660px;
+		height: 864px;
+		max-height: 90vh;
+	}
+	.modal-content-pc.other-modal-content-pc {
+		width: 660px;
+		height: 864px;
+		max-height: 90vh;
+		padding-bottom: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.modal-content-pc.roulette-modal-content-pc {
+		width: 660px;
+		height: 912px;
+		padding: 0;
+		max-height: 98%;
+	}
+	.modal-content-pc.roulette-rule-bonus {
+		width: 660px;
+		height: 864px;
+		max-height: 98%;
+		@apply flex flex-col overflow-hidden;
+	}
+	.modal-content-pc.roulette-reward {
+		width: 500px;
+		height: 686px;
+		max-height: 80%;
+		&.vip-reward {
+			height: 546px;
+		}
+	}
+	.modal-content-pc.desc-modal-content-pc {
+		width: 660px;
+		height: min(864px, 98%);
+	}
+	.modal-content-pc.promotion-modal-content-pc {
+		width: 660px;
+		height: 864px;
+		max-height: 90vh;
+		padding: 0;
+		overflow: initial;
+		background: transparent;
+	}
+	.modal-content-pc.chat-modal-content-pc {
+		background-color: transparent !important;
+	}
+}
+
+.modal__close {
+	width: 30px;
+}

@@ -1,0 +1,101 @@
+$text-base: #E0E4ED;
+$text-lowlight: #B1BCCC;
+$text-button: #303346;
+$text-button2: #ffffff;
+$down-03: #c34904;
+$error: #ea1448;
+$main: #ffc700;
+$second: #4679FE;
+$btn-main: #ffc700;
+$btn-second: linear-gradient(150deg, #67A4FF 0%, #2D61E5 100%);
+$placeholder-color: #585e77;
+$bg: #1c1f2d;
+$block-bg: #2e354b;
+$block-bg-2: #252939;
+$disable-color: #303346;
+$gray: #74767e;
+$dark-bg: #141414;
+
+$login-white: #ffffff;
+$login-text: #b1b2cc;
+$login-text-button: #ffffff;
+$login-second: #4679FE;
+$login-main: #ffc700;
+$login-miaobian: #585e77;
+
+$home-text-base: #E0E4ED;
+$home-text-button: #ffffff;
+$home-text-lowlight: #B1BCCC;
+$home-second: #4679FE;
+$home-block-bg: #2e354b;
+$home-block-bg-2: #252939;
+$home-bg: #1c1f2d;
+
+$menu-text-lowlight: #B1BCCC;
+$menu-gray: #74767e;
+$menu-block-bg-2: #252939;
+$menu-bg: #1c1f2d;
+$menu-second: #4679FE;
+$menu-bj01: linear-gradient(90deg, #117023 0%, #18252b 100%);
+$menu-bj02: linear-gradient(90deg, #172D6C 0%, #202843e6 100%);
+$menu-bj03: linear-gradient(90deg, #441830 0%, #311c26e6 100%);
+
+$Activity-bg: linear-gradient(180deg, rgba(38, 40, 40, 0) 0%, rgba(38, 40, 40, 0.3) 100%);
+//B模板额外颜色///////////////////////////////////////////////////////////////////////
+
+//前端自定义颜色///////////////////////////////////////////////////////////////////////
+$color-bg-o: rgba($bg, 0.5);
+$color-btn-bg: $block-bg-2;
+$color-btn-border: $block-bg;
+
+//充值
+$deposit-btn-active-border: '';
+$deposit-amount-select: linear-gradient(101.88deg, rgba(194, 240, 13, 0.8) 0%, rgba(207, 255, 19, 0) 100%);
+
+//奖金中心
+$bonus-center-card-bg: linear-gradient(91deg, rgba(165, 48, 132, 0.5) 0.72%, rgba(70, 51, 51, 0) 99.6%);
+
+// 双钱包
+$wallet-user-menu-bg: #2e354b;
+$wallet-menu-radius: 10px;
+$wallet-menu-decorate-right: 27px;
+$wallet-menu-decorate-right-h5: 13px;
+
+// 聊天室
+$chat-bg-2: $bg;
+$chat-bg-3: $block-bg;
+$chat-bg-4: linear-gradient(107deg, #67A4FF -1.73%, #2D61E5 76.33%);
+
+$chat-different-1: none;
+$chat-different-2: flex;
+$chat-month-width: 150px;
+$chat-month-height: 40px;
+$chat-month-color: #ffffff;
+$chat-month-weight: 700;
+$chat-month-space: 5px;
+$chat-emo-color: #585e77;
+$chat-select-font-size: 13px;
+$chat-select-height: 25px;
+$chat-select-ml: 23px;
+$chat-select-scale: scale(0.8, 0.8);
+$chat-arrow-position: 6px;
+$chat-arrow-color: #ffffff;
+$chat-gif-height: 78px;
+$chat-gif-width: calc((100% - 10px) / 3);
+$chat-gif-child-2n: 5px;
+$chat-gif-child-3n: 0;
+$chat-header-title-left: 48px;
+
+// 以下无用-暂不删除
+// $color-wallet-bg: linear-gradient(180deg, #193431, #262828);
+// $color-wallet-border: linear-gradient(180deg, #2f4b43, #323c3c);
+
+//通用px设置/////////////////////////////////////////////////////
+$button-height: 40px;
+$border-radius: 10px;
+$border-game-radius: 16px;
+$page-margin: 15px;
+$pc-header-max-width: 282px;
+$pc-header-min-width: 60px;
+
+/////////////////////////////////////////////////////////////////////////

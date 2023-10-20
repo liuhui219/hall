@@ -1,0 +1,70 @@
+$text-base: #e2e3e8;
+$text-lowlight: #b0addd;
+$text-button: #3c3785;
+$text-button2: #3c3785;
+$down-03: #c34904;
+$error: #ea1448;
+$main: #feeb3d;
+$second: #feeb3d;
+$btn-main: #feeb3d;
+$btn-second: #feeb3d;
+$placeholder-color: #6d6c9f;
+$bg: #241d66;
+$block-bg: #4d3db2;
+$block-bg-2: #3c3785;
+$disable-color: #4e4d8e;
+$gray:  #b0addd;
+$dark-bg: #141142;
+
+$login-bg: #241d66;
+$login-miaobian: #323c3c;
+$login-text: #7f8889;
+$login-text-lowlight: #b2babb;
+$login-text-button: #3c3785;
+$login-block-bg: #4d3db2;
+$login-main: #feeb3d;
+$login-second: #feeb3d;
+$login-error: #ff313d;
+$login-gray: #767596;
+
+$home-text-base: #e2e8e3;
+$home-text-button: #3c3785;
+$home-text-lowlight: #b0addd;
+$home-second: #feeb3d;
+$home-main: #feeb3d;
+$home-block-bg: #4d3db2;
+$home-block-bg-2: #3c3785;
+$home-bg: #241d66;
+$home-gray: #4e4d8e;
+
+$menu-second: #feeb3d;
+$menu-block-bg-2: #3c3785;
+$menu-text-lowlight: #b0addd;
+$menu-gray: #767596;
+$menu-bg: #241d66;
+$menu-disable-color: #4e4d8e;
+$menu-gray-2: #2e3132;
+$menu-text-gray: #76787e;
+
+$Activity-bg: linear-gradient(180deg, rgba(55, 49, 141, 0) 0%, rgba(55, 49, 141, 0.3) 100%);
+//前端自定义颜色///////////////////////////////////////////////////////////////////////
+$color-bg-o: rgba($bg, 0.5);
+$color-btn-bg: $block-bg-2;
+$color-btn-border: $block-bg;
+
+//充值
+$deposit-btn-active-border: 1px solid #feeb3d;
+$deposit-amount-select: linear-gradient(101.88deg, rgba(240, 217, 13, 0.8) 0%, rgba(240, 217, 13, 0) 100%);
+
+// 双钱包
+$wallet-user-menu-bg: #39366d;
+$wallet-rules-line: #3c3785;
+
+// 聊天室
+$chat-bg-2: $bg;
+$chat-bg-3: $block-bg;
+
+// 以下无用-暂不删除
+// $color-wallet-bg: linear-gradient(180deg, #5846b0, #241d66);
+// $color-wallet-border: linear-gradient(180deg, #8976ff, #3b328c);
+

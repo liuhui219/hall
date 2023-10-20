@@ -1,0 +1,15 @@
+{
+  "background_color": "black",
+  "description": "",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/res/icon/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Afun",
+  "short_name": "Afun",
+  "start_url": "/"
+}

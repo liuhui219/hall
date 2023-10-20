@@ -1,0 +1,21 @@
+// 独立样式
+body[model='A'] {
+	#root,
+	#root-p {
+		input {
+			&::placeholder {
+				color: $text-lowlight;
+				font-weight: 500;
+			}
+		}
+		.register-modal,
+		.reset-modal {
+			input {
+				&::placeholder {
+					color: $login-text;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+}

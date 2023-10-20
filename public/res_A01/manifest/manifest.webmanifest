@@ -1,0 +1,15 @@
+{
+  "background_color": "black",
+  "description": "",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/res_A01/icon/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "AFUN-TEST-A01",
+  "short_name": "AFUN-TEST-A01",
+  "start_url": "/?mApp=1"
+}

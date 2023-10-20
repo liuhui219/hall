@@ -1,0 +1,73 @@
+.invite-chest-header-back {
+	background: #000000;
+	opacity: 0.5;
+	@apply fixed left-[10px] top-[5px] rotate-[90deg] rounded-full flex items-center justify-center w-[40px] h-[40px] z-[4];
+}
+.invite-chest-rule-content {
+	background-size: 100% auto;
+	background-repeat: repeat-y;
+	color: #363899;
+	@apply text-[12px] pt-[21px] pl-[23%] pr-[15%] font-bold flex flex-col;
+}
+.invite-chest-btn {
+	background-size: cover;
+	background-repeat: no-repeat;
+	@apply absolute top-[42%] left-[23.5%] px-[11%] pt-4 pb-5 w-[57%] flex justify-center rounded-full overflow-hidden;
+}
+.invite-chest-gift-container {
+	width: 23.7%;
+	.invite-chest-gift-item {
+		width: 100%;
+		padding-bottom: 120%;
+		height: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		.invite-chest-gift {
+			color: #faf678;
+			// line-height: 14px;
+			font-size: 14px;
+			font-weight: 600;
+			text-shadow: 0px 1px 1px #1c41d4;
+			position: absolute;
+			left: 0;
+			text-align: center;
+			bottom: 10%;
+			width: 100%;
+		}
+	}
+}
+.invite-chest-reward-btn {
+	position: relative;
+	font-size: 12px;
+	text-align: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 24.8%;
+	margin-top: 8px;
+	padding-top: 2px;
+	transform: scale(0.9);
+	text-transform: uppercase;
+	&::after {
+		padding-top: 2px;
+		content: attr(data-text);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		text-transform: uppercase;
+		-webkit-text-stroke: 1px #fff;
+	}
+}
+
+.invite-chest-reward-btn.invite-chest-reward-btn-0 {
+	-webkit-text-stroke: 3px #636363;
+}
+.invite-chest-reward-btn.invite-chest-reward-btn-1 {
+	-webkit-text-stroke: 3px #16469a;
+}
+
+.invite-chest-reward-btn.invite-chest-reward-btn-2 {
+	-webkit-text-stroke: 3px #b75d24;
+}

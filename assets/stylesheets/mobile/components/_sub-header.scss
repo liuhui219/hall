@@ -1,0 +1,19 @@
+.sub-header-wrap {
+	@apply h-[60px] flex items-center relative;
+	border-bottom: 1px solid $block-bg-2;
+	.back-btn {
+		color: $gray;
+		@apply absolute z-[1] shrink-0 top-0 px-[17px] bottom-0 m-auto flex items-center;
+		.sysicon-arrow-left {
+			font-size: 18px;
+		}
+	}
+
+	.sub-header-title {
+		color: $color-white;
+		@apply text-[14px] font-medium text-center w-full;
+	}
+	.right {
+		@apply absolute shrink-0 top-0 bottom-0 m-auto;
+	}
+}

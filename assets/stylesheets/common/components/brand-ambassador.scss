@@ -1,0 +1,18 @@
+.brand-ambassador-view {
+	.swiper-slide {
+		.slide-img-wrap {
+			filter: brightness(0.3);
+		}
+	}
+	.swiper-slide-active {
+		.slide-img-wrap {
+			filter: brightness(1);
+		}
+	}
+	.swiper-pagination-bullet {
+		background: $gray;
+	}
+	.swiper-pagination-bullet-active {
+		background: $second;
+	}
+}

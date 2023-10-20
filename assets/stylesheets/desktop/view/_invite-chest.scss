@@ -1,0 +1,21 @@
+.invite-chest-header-back {
+	@apply absolute;
+}
+
+.invite-chest-btn {
+	@apply w-[50%] pt-5;
+}
+.invite-chest-reward-btn {
+	position: relative;
+	font-size: 12px;
+	text-align: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 24.8%;
+	margin-top: 8px;
+	padding-top: 6px;
+
+	&::after {
+		padding-top: 6px;
+	}
+}

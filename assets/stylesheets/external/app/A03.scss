@@ -1,0 +1,74 @@
+// 独立样式
+body[model='A'] {
+	#root,
+	#root-p {
+		// .navigation,
+		// .navigation-header,
+		// .header {
+		// 	.logo {
+		// 		height: 40px;
+		// 	}
+		// }
+
+		.wallet {
+			border-color: transparent;
+		}
+
+		.btn-random {
+			background-color: #ffc700;
+			color: #373563;
+		}
+
+		.navbar {
+			& > button {
+				color: #676597;
+
+				&.current {
+					color: #d4d1ff;
+				}
+			}
+		}
+
+		.userinfo,
+		.vip-view,
+		.rewards-card {
+			.btn-highlight {
+				background-color: #feeb3d;
+				color: $block-bg;
+			}
+		}
+
+		.userinfo-options {
+			background: #3c3785;
+		}
+		.userinfo-wallet {
+			.card-block {
+				background: #3c3785;
+			}
+
+			.text-second {
+				color: #feeb3d;
+			}
+		}
+
+		.btn-disable {
+			color: #ffffff;
+			border-color: transparent;
+		}
+
+		.btn-icon-group {
+			.btn-icon {
+				color: $placeholder-color;
+
+				&.active {
+					color: $second;
+				}
+			}
+		}
+		.sys-input {
+			.input-wrap {
+				border-color: $placeholder-color;
+			}
+		}
+	}
+}

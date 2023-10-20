@@ -1,0 +1,27 @@
+// 独立样式
+body[model='A'] {
+	#root,
+	#root-p {
+		// .navigation,
+		// .navigation-header,
+		// .header {
+		// 	.logo {
+		// 		height: 43px;
+		// 	}
+		// }
+		
+		.task-view {
+			.task-top-text {
+				color: #ffd300;
+			}
+			.award-box {
+				&.achieve {
+					background: linear-gradient(180deg, #83021C 0%, #D9113A 100%);
+					&::after {
+						background: #ff0034;
+					}
+				}
+			}
+		}
+	}
+}

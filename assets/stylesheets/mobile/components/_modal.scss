@@ -1,0 +1,194 @@
+.common-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: zIndex('modal');
+	display: flex;
+	flex-direction: column;
+	transform: translateY(20%);
+	transition: 0.3s ease;
+	pointer-events: none;
+	opacity: 0;
+	background-color: $bg;
+	&.active {
+		opacity: 1;
+		pointer-events: auto;
+		transform: translateY(0);
+	}
+	.modal-header {
+		flex: 0 0 60px;
+		> button {
+			position: absolute;
+			top: 0;
+			width: 60px;
+			height: 60px;
+			color: $gray;
+			font-size: 16px;
+			&.button-left {
+				left: 0;
+			}
+			&.button-right {
+				right: 0;
+			}
+		}
+		.header-title {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			color: $text-base;
+			font-size: 14px;
+			text-align: center;
+		}
+	}
+	.modal-body {
+		flex: 1;
+		padding: 36px 32px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.modal-footer {
+		flex: 0 0 60px;
+	}
+}
+.modal-form {
+	padding: 24px 0;
+	> * {
+		margin-bottom: 16px;
+	}
+}
+.modal-dialog-container {
+	width: 100%;
+}
+.modal-dialog.modal-content {
+	width: calc(100% - 32px);
+	margin: 0 16px;
+	padding: 0 16px 24px;
+	background-color: $block-bg-2 !important;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-radius: $border-radius;
+}
+
+//自定义增加
+.vfm--overlay {
+	-webkit-backdrop-filter: blur(12px);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.vfm--inset.vfm--fixed.user-info {
+	height: calc(100% - #{$app-navbar-height}) !important;
+}
+.vfm--inset.vfm--fixed.wallet {
+	height: calc(100% - calc(#{$app-header-height} - #{$app-download-height}) - #{$app-navbar-height}) !important;
+	top: calc(#{$app-header-height} + #{$app-download-height});
+}
+
+.vfm {
+	.vfm__content.dialog-content {
+		width: 100%;
+		padding-top: 0 !important;
+	}
+	.modal-content:not(.modal-dialog) {
+		border-radius: 0;
+	}
+	.modal-content.chat-modal-content {
+		padding-bottom: 0;
+		padding-top: 0 !important;
+	}
+	.modal-content.download-modal-content {
+		// width: calc(100% - 32px);
+		// height: 320px;
+		background-color: transparent;
+		padding: 0;
+		overflow: auto;
+	}
+	.modal-content.logout-modal-content {
+		display: flex;
+		flex-direction: column;
+		width: calc(100% - 2rem);
+		padding-top: 0;
+		height: auto;
+		border-radius: $border-radius;
+	}
+	.modal-content.inviteChest-modal-content {
+		display: flex;
+		flex-direction: column;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.modal-content.userInfo-modal-content {
+		display: flex;
+		flex-direction: column;
+		padding-top: 0;
+		height: 100%;
+		border-radius: 0;
+	}
+	.modal-content.reset-modal-content,
+	.modal-content.register-modal-content,
+	.modal-content.login-modal-content {
+		// background-color: transparent;
+		height: auto;
+		margin: 0 30px;
+		padding-bottom: 0;
+		border: none;
+		border-radius: $border-radius;
+		padding-top: 0;
+		.modal-form {
+			padding: 20px 0 0 0;
+			> * {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	.modal-content.reward-modal-content,
+	.modal-content.transaction-modal-content,
+	.modal-content.message-modal-content {
+		@apply mx-0;
+	}
+	.modal-content.other-modal-content {
+		padding-bottom: 0;
+	}
+	.modal-content.checkin-modal-content {
+		@apply px-[15px] mx-0 overflow-hidden;
+	}
+	.modal-content.roulette-modal-content {
+		padding-bottom: 0;
+		@apply mx-0 left-0 overflow-y-auto overflow-x-hidden;
+		background-color: rgba(0, 0, 0, 0.95);
+
+		.roulette-header {
+			background-color: rgba(0, 0, 0, 0.95) !important;
+		}
+		.header:not(.roulette-header) {
+			border-bottom: 1px solid $block-bg-2;
+		}
+	}
+	.modal-content.desc-modal-content {
+		padding-bottom: 0;
+		@apply px-[15px] mx-0 left-0 overflow-y-auto overflow-x-hidden;
+	}
+	.vfm-overlay.gamedetail-overlayer {
+		background-color: none;
+		-webkit-backdrop-filter: blur(0);
+		backdrop-filter: blur(0px);
+	}
+	.modal-content.gamedetail-modal-content {
+		background: rgba(0, 0, 0, 0.3);
+		padding-bottom: 0;
+	}
+
+	.modal-content.promotion-modal-content {
+		margin: 0 15px;
+		height: 80%;
+		padding: 0;
+		overflow: initial;
+		border-radius: 15px;
+	}
+}
+

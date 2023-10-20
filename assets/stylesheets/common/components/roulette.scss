@@ -1,0 +1,44 @@
+.color-text-nomarl {
+	color: $color-roulette-nomarl;
+}
+.color-text-advance {
+	color: $color-roulette-advance;
+}
+.color-text-weekly {
+	color: $color-roulette-weekly;
+}
+
+.roulette-tab {
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	&-mobile {
+		@apply w-[32%] py-[10px] flex flex-col items-center;
+	}
+	&-pc {
+		@apply w-[188px] py-[11px] flex flex-col items-center gap-[4px];
+	}
+}
+
+.wheel-bottom-tip {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.roulette-out {
+	animation: list-loading-spinner 18s linear infinite;
+}
+.roulette-out-revese {
+	animation: list-loading-spinner-reverse 18s linear infinite;
+}
+.roulette-content {
+	// background: linear-gradient(180deg, black, black 50%, #13003e 80%, #13003e 100%);
+}
+.spotlight-animation {
+	animation: spotlight-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.roulette-swiper {
+	background-color: $color-roulette-bg;
+	border-radius: 10px;
+	border: 2px solid #6e2cb8;
+	display: flex;
+}

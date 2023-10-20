@@ -1,0 +1,110 @@
+html,
+body {
+	background: $bg;
+	font-family: 'Poppins' !important;
+	color: $text-base;
+	* {
+		box-sizing: border-box;
+	}
+	&[floatup='1'] {
+		.game-list-swiper,
+		.float-hidden {
+			overflow: visible !important;
+		}
+	}
+}
+
+.page-container-pc{
+	min-height: 100vh;
+}
+
+.wrap {
+	width: 100%;
+	// min-width: 1280px;
+	min-width: 1300px;
+	max-width: 1344px;
+	padding-left: 32px;
+	padding-right: 32px;
+	margin: 0 auto;
+}
+
+.pointer {
+	cursor: pointer;
+}
+.pointer-hover {
+	cursor: pointer;
+	&:hover {
+		opacity: 0.8;
+	}
+}
+.bar {
+	width: 50%;
+	height: 8px;
+	border-radius: 8px;
+	background: $second;
+	&-bg {
+		width: 100%;
+		background-color: $bg;
+	}
+}
+
+.block-title {
+	font-size: 16px;
+}
+.section-title {
+	font-size: 24px;
+	font-weight: 700;
+	color: $color-white;
+}
+
+#root-p {
+	.link:hover,
+	button:not(.no-hover):hover {
+		filter: brightness(110%);
+		transition: 0.35s;
+	}
+}
+
+.card-block {
+	border-radius: $border-radius;
+	background: $block-bg-2;
+}
+
+.card-block-dark {
+	border-radius: $border-radius;
+	background-color: $bg;
+}
+.overflow-wrap {
+	overflow-wrap: anywhere;
+}
+
+.app-tournament {
+	position: fixed;
+	z-index: 10000;
+	right: 15px;
+	top: 50%;
+}
+
+.grab:hover {
+	cursor: grab !important;
+}
+
+:root {
+	--current-menu-width: 320px;
+}
+
+.dl-refer-describe{
+	@apply p-[16px] mb-[10px] text-[14px] rounded-md;
+	background: $block-bg-2;
+	h2{
+		@apply font-[600];
+		color: $color-white;
+	}
+	p{
+		@apply font-[400];
+		color: $text-lowlight;
+		span{
+			color: $main;
+		}
+	}
+}

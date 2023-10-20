@@ -1,0 +1,198 @@
+@font-face {
+  font-family: 'sysicon';
+  src:  url('~~/assets/stylesheets/icons/fonts/sysicon.eot?br4lrw');
+  src:  url('~~/assets/stylesheets/icons/fonts/sysicon.eot?br4lrw#iefix') format('embedded-opentype'),
+    url('~~/assets/stylesheets/icons/fonts/sysicon.ttf?br4lrw') format('truetype'),
+    url('~~/assets/stylesheets/icons/fonts/sysicon.woff?br4lrw') format('woff'),
+    url('~~/assets/stylesheets/icons/fonts/sysicon.svg?br4lrw#sysicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="sysicon-"], [class*=" sysicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sysicon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sysicon-star2:before {
+  content: "\e937";
+}
+.sysicon-tiktok:before {
+  content: "\e938";
+}
+.sysicon-home:before {
+  content: "\e936";
+}
+.sysicon-lock:before {
+  content: "\e930";
+}
+.sysicon-edit:before {
+  content: "\e92f";
+}
+.sysicon-full-screen:before {
+  content: "\e92e";
+}
+.sysicon-triangle-right:before {
+  content: "\e92d";
+}
+.sysicon-whats_app:before {
+  content: "\e933";
+}
+.sysicon-download1:before {
+  content: "\e934";
+}
+.sysicon-telegram:before {
+  content: "\e935";
+}
+.sysicon-copy:before {
+  content: "\e932";
+}
+.sysicon-facebook:before {
+  content: "\e918";
+}
+.sysicon-twitter:before {
+  content: "\e919";
+}
+.sysicon-linkedin:before {
+  content: "\e91a";
+}
+.sysicon-instagram:before {
+  content: "\e91b";
+}
+.sysicon-TV:before {
+  content: "\e931";
+}
+.sysicon-account:before {
+  content: "\e926";
+}
+.sysicon-best-history:before {
+  content: "\e927";
+}
+.sysicon-deposit:before {
+  content: "\e928";
+}
+.sysicon-message:before {
+  content: "\e929";
+}
+.sysicon-sign-out:before {
+  content: "\e92a";
+}
+.sysicon-transaction:before {
+  content: "\e92b";
+}
+.sysicon-withdraw:before {
+  content: "\e92c";
+}
+.sysicon-arrow-left:before {
+  content: "\e925";
+}
+.sysicon-chrome:before {
+  content: "\e924";
+}
+.sysicon-check:before {
+  content: "\e923";
+}
+.sysicon-hide-password:before {
+  content: "\e921";
+}
+.sysicon-show-password:before {
+  content: "\e922";
+}
+.sysicon-mail-outbox:before {
+  content: "\e91f";
+}
+.sysicon-tel-outbox:before {
+  content: "\e920";
+}
+.sysicon-alert-error:before {
+  content: "\e91c";
+}
+.sysicon-alert-success:before {
+  content: "\e91d";
+}
+.sysicon-alert-warning:before {
+  content: "\e91e";
+}
+.sysicon-search:before {
+  content: "\e917";
+}
+.sysicon-close:before {
+  content: "\e906";
+}
+.sysicon-refresh:before {
+  content: "\e915";
+}
+.sysicon-select-arrow-down:before {
+  content: "\e916";
+}
+.sysicon-affiliate:before {
+  content: "\e900";
+}
+.sysicon-badge:before {
+  content: "\e901";
+}
+.sysicon-ball:before {
+  content: "\e902";
+}
+.sysicon-chat:before {
+  content: "\e903";
+}
+.sysicon-chats:before {
+  content: "\e904";
+}
+.sysicon-cherry:before {
+  content: "\e905";
+}
+.sysicon-crown:before {
+  content: "\e907";
+}
+.sysicon-download:before {
+  content: "\e908";
+}
+.sysicon-fire:before {
+  content: "\e909";
+}
+.sysicon-gift:before {
+  content: "\e90a";
+}
+.sysicon-handshake:before {
+  content: "\e914";
+}
+.sysicon-history:before {
+  content: "\e90b";
+}
+.sysicon-loudspeaker:before {
+  content: "\e90c";
+}
+.sysicon-member:before {
+  content: "\e90d";
+}
+.sysicon-menu:before {
+  content: "\e90e";
+}
+.sysicon-play:before {
+  content: "\e90f";
+}
+.sysicon-poker:before {
+  content: "\e910";
+}
+.sysicon-roulette:before {
+  content: "\e911";
+}
+.sysicon-star:before {
+  content: "\e912";
+}
+.sysicon-task:before {
+  content: "\e913";
+}

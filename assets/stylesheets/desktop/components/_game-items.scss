@@ -1,0 +1,62 @@
+.game-items-wrap-pc {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 24px;
+	.game-item {
+		position: relative;
+
+		border-radius: $border-game-radius;
+		// overflow: hidden;
+		// background: $block-bg-2;
+		.game-cover {
+			overflow: hidden;
+			// border-top-left-radius: $border-game-radius;
+			// border-top-right-radius: $border-game-radius;
+			border-radius: $border-game-radius;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.game-info {
+			.game-name {
+				font-size: 16px;
+				font-weight: 700;
+			}
+			.game-provider {
+				font-size: 12px;
+				font-weight: 500;
+			}
+		}
+	}
+}
+.game-items-list-wrap-pc {
+	$game-item-width: 192px;
+	@apply mt-[48px] flex flex-wrap gap-y-[32px];
+	column-gap: calc((100% - 6 * $game-item-width) / 5);
+	.game-item {
+		position: relative;
+		width: $game-item-width;
+		border-radius: $border-game-radius;
+		// overflow: hidden;
+		// background: $block-bg-2;
+		.game-cover {
+			// border-top-left-radius: $border-game-radius;
+			// border-top-right-radius: $border-game-radius;
+			border-radius: $border-game-radius;
+			overflow: hidden;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.game-info {
+			.game-name {
+				font-size: 16px;
+				font-weight: 700;
+			}
+			.game-provider {
+				font-size: 12px;
+				font-weight: 500;
+			}
+		}
+	}
+}

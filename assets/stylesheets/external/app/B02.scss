@@ -1,0 +1,31 @@
+// 独立样式
+body[model='B'] {
+	#root,
+	#root-p {
+		// .navigation,
+		// .navigation-header,
+		// .header {
+		// 	.logo {
+		// 		height: 40px;
+		// 	}
+		// }
+		
+		// .header-pc {
+		// 	.logo {
+		// 		height: 50px;
+		// 	}
+		// }
+
+		.task-view {
+			.task-top {
+				padding-bottom: 46%;
+			}
+			.task-top-text {
+				color: $color-white;
+			}
+			.top-img {
+				border-radius: $border-radius;
+			}
+		}
+	}
+}
